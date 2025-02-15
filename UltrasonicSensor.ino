@@ -1,5 +1,3 @@
-// Ultrasonic Sensor HC-SR04 integration with Arduino.
-
 const int trigPin = 9;
 const int echoPin = 10;
 long duration1,duration2;
@@ -11,11 +9,11 @@ void setup() {
   pinMode(echoPin, INPUT);
   Serial.begin(9600);
 }
+
 void loop() {
-  // Clears the trigPin
   digitalWrite(trigPin, LOW);
   delayMicroseconds(2);
-  // Sets the trigPin on HIGH state for 10 micro seconds
+  
   digitalWrite(trigPin, HIGH);
   delayMicroseconds(10);
   digitalWrite(trigPin, LOW);
@@ -23,7 +21,7 @@ void loop() {
   long t1=millis();
   digitalWrite(trigPin, LOW);
   delayMicroseconds(2);
-  // Sets the trigPin on HIGH state for 10 micro seconds
+  
   digitalWrite(trigPin, HIGH);
   delayMicroseconds(10);
   digitalWrite(trigPin, LOW);
